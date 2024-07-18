@@ -15,6 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gmail:before {
+  content: '\f1a0';  /* 这是一个示例，你需要替换为你的图标代码 */
+}
+
 .icon-publish:before {
   content: "\e7b3";
 }

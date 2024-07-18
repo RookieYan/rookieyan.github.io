@@ -34,7 +34,11 @@ document.ready(
     // this script shouldn't be changed.
     () => {
         var _Blog = window._Blog || {};
-        const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+        let currentTheme = window.localStorage && window.localStorage.getItem('theme');
+        if(!currentTheme) {
+            currentTheme = 'dark';
+            window.localStorage && window.localStorage.setItem('theme', 'dark');
+        }
         const isDark = currentTheme === 'dark';
         const pagebody = document.getElementsByTagName('body')[0]
         if (isDark) {
